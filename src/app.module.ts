@@ -7,6 +7,8 @@ import { DatabaseModule } from './database/database.module';
 import { ProductosController } from './productos/productos.controller';
 import { ProductosService } from './productos/productos.service';
 import { ConfigModule } from '@nestjs/config';
+import { ProveedoresController } from './proveedores/proveedores.controller';
+import { ProveedoresModule } from './proveedores/proveedores.module';
 
 @Module({
   imports: [DatabaseModule, ConfigModule.forRoot()],

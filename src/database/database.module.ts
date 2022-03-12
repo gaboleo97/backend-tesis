@@ -3,6 +3,8 @@ import { TypeOrmModule} from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { ProductEntity } from 'src/entity/product-entity';
 import { ProductosModule } from '../productos/productos.module';
+import { ProveedoresModule } from '../proveedores/proveedores.module';
+import { ProveedoresEntity } from '../entity/proveedores-entity';
 
 
 @Module({
@@ -15,11 +17,13 @@ import { ProductosModule } from '../productos/productos.module';
 			password: '',
 			database: 'backend-gabo-tesis', 
 			entities:[
-				ProductEntity
+				ProductEntity,
+				ProveedoresEntity
 			 ],
 			 synchronize:true
 		}),
-	ProductosModule
+	ProductosModule,
+	ProveedoresModule
 		
 	]
 	
